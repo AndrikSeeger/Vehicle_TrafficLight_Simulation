@@ -2,13 +2,13 @@
 
 Graphische Implementierung einer Fahrzeug- und Streckensimulation mittels ASCET. Das Fahrprofil stellt eine Kombination aus Stadt- und Überlandverkehr inklusive Ampeln dar. Die Simulation der Fahrerstrategie basiert auf der Optimierung zur möglichst konstanten Fahrt ohne Anhalten. 
 
-## Von:
-### Andrik Seeger
-### Thomas Tran
-### Tom Schubert
-
 ##### Experiment unter TrafficLightProject\experiments\Experiments\system\PC_Final
 
+## Von:
+
+* Andrik Seeger
+* Thomas Tran
+* Tom Schubert
 
 ## Testen
 
