@@ -1,0 +1,87 @@
+classType RisingEdge.Rising
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active {
+			connection_11, connection_40, connection_30
+		}
+	}
+	greater at (241, 156) size (2, 4) {
+		inPin connection_39
+		inPin connection_18
+		outPin {
+			connection_32
+		}
+	}
+	ifElse at (301, 161) {
+		inPin connection_32
+		ifControlFlowOutPin {
+			connection_33
+		}
+		elseControlFlowOutPin {
+			connection_35
+		}
+		sequenceCall {
+			inPin connection_11
+		}
+	}
+	simpleIdentifier oldSignal at (151, 185) {
+		label at (0, -1)
+		inPin connection_41 {
+			bendpoints (60, 0), (60, 30)
+		}
+		outPin {
+			connection_18
+		}
+		sequenceCall {
+			inPin connection_40
+		}
+	}
+	methodArgumentIdentifier calc.arg at (11, 155) {
+		label at (0, -1)
+		outPin {
+			connection_41, connection_39
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	return at (611, 245) {
+		label at (0, 0)
+		inPin connection_37
+		sequenceCall {
+			inPin connection_30
+		}
+	}
+	simpleIdentifier returnValue at (471, 185) {
+		label at (0, -1)
+		inPin connection_34
+		outPin sequenceCall {
+			inPin connection_33
+		}
+	}
+	simpleIdentifier returnValue at (471, 245) {
+		label at (0, -1)
+		inPin connection_36
+		outPin {
+			connection_37
+		}
+		sequenceCall {
+			inPin connection_35 {
+				bendpoints (0, 30)
+			}
+		}
+	}
+	literal Boolean "true" at (391, 183) size (49, 0) {
+		outPin {
+			connection_34
+		}
+	}
+	literal Boolean "false" at (391, 243) size (49, 0) {
+		outPin {
+			connection_36
+		}
+	}
+	freeComment at (31, 131) {
+		"Bei Steigung wird true returned, sonst false "
+	}
+}

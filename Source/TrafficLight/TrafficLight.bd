@@ -1,0 +1,417 @@
+classType TrafficLight.TrafficLight
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active {
+			connection_18, connection_20, connection_22, connection_13, connection_10, connection_45, connection_49, connection_51, connection_53, connection_57
+		}
+	}
+	simpleIdentifier red at (541, 615) {
+		label at (0, -1)
+		inPin connection_29
+		outPin sequenceCall {
+			inPin connection_28
+		}
+	}
+	simpleIdentifier yellow at (521, 535) {
+		label at (0, -1)
+		inPin connection_17
+		outPin sequenceCall at (-10, -24) {
+			inPin connection_16
+		}
+	}
+	simpleIdentifier green at (631, 825) {
+		label at (0, -1)
+		inPin connection_44
+		outPin sequenceCall {
+			inPin connection_43
+		}
+	}
+	complexIdentifier StopWatch_instance at (111, 491) size (6, 4) backgroundColor #ffffff {
+		label at (-70, -59)
+		methodCall SystemLib.CounterTimer.StopWatch.value {
+			returnPin at (right, 1) {
+				connection_25, connection_31, connection_38, connection_46, connection_12
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+		methodCall SystemLib.CounterTimer.StopWatch.compute {
+			methodVoidPin at (left, 1) sequenceCall at (-70, -14) {
+				inPin connection_10
+			}
+		}
+		methodCall SystemLib.CounterTimer.StopWatch.reset {
+			methodVoidPin at (bottom, 2) sequenceCall at (-24, 21) {
+				inPin connection_11 {
+					bendpoints (20, 0), (20, 40), (-260, 40)
+				}
+			}
+		}
+	}
+	less at (281, 506) size (2, 4) {
+		inPin connection_12
+		inPin connection_15
+		outPin {
+			connection_14
+		}
+	}
+	ifElse at (351, 511) {
+		inPin connection_14
+		ifControlFlowOutPin {
+			connection_16
+		}
+		elseControlFlowOutPin {
+			connection_26
+		}
+		sequenceCall {
+			inPin connection_13
+		}
+	}
+	simpleIdentifier yellowTime at (211, 535) {
+		label at (0, -1)
+		outPin {
+			connection_15
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	literal Boolean "true" at (441, 533) size (49, 0) {
+		outPin {
+			connection_17
+		}
+	}
+	freeComment at (221, 711) size (16, 7) {
+		"Phasenspezifische kumulierte Zeiten der Ampelfarben beginnend mit Gelb in Sekunden"
+	}
+	simpleIdentifier green at (241, 365) {
+		label at (0, -1)
+		inPin connection_23
+		outPin sequenceCall {
+			inPin connection_22
+		}
+	}
+	simpleIdentifier red at (241, 305) {
+		label at (0, -1)
+		inPin connection_21
+		outPin sequenceCall {
+			inPin connection_20
+		}
+	}
+	simpleIdentifier yellow at (241, 245) {
+		label at (0, -1)
+		inPin connection_19
+		outPin sequenceCall at (-10, -24) {
+			inPin connection_18
+		}
+	}
+	literal Boolean "false" at (151, 243) size (49, 0) {
+		outPin {
+			connection_19
+		}
+	}
+	literal Boolean "false" at (151, 303) size (49, 0) {
+		outPin {
+			connection_21
+		}
+	}
+	literal Boolean "false" at (151, 363) size (49, 0) {
+		outPin {
+			connection_23
+		}
+	}
+	less at (321, 586) {
+		inPin connection_25 {
+			bendpoints (0, 80)
+		}
+		inPin connection_24
+		outPin {
+			connection_27
+		}
+	}
+	simpleIdentifier redTime at (261, 605) {
+		label at (0, -1)
+		outPin {
+			connection_24
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	ifElse at (391, 591) {
+		inPin connection_27
+		ifControlFlowOutPin {
+			connection_28
+		}
+		elseControlFlowOutPin {
+			connection_32
+		}
+		sequenceCall {
+			inPin connection_26 {
+				bendpoints (0, 30)
+			}
+		}
+	}
+	literal Boolean "true" at (461, 613) size (49, 0) {
+		outPin {
+			connection_29
+		}
+	}
+	less at (351, 656) {
+		inPin connection_31 {
+			bendpoints (0, 150)
+		}
+		inPin connection_30
+		outPin {
+			connection_33
+		}
+	}
+	simpleIdentifier redYellowTime at (271, 675) {
+		label at (0, -1)
+		outPin {
+			connection_30
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	ifElse at (431, 661) {
+		inPin connection_33
+		ifControlFlowOutPin {
+			connection_34, connection_36
+		}
+		elseControlFlowOutPin {
+			connection_41
+		}
+		sequenceCall {
+			inPin connection_32 {
+				bendpoints (0, 20)
+			}
+		}
+	}
+	literal Boolean "true" at (541, 683) size (49, 0) {
+		outPin {
+			connection_35
+		}
+	}
+	simpleIdentifier yellow at (621, 685) {
+		label at (0, -1)
+		inPin connection_35
+		outPin sequenceCall at (-10, -24) {
+			inPin connection_34
+		}
+	}
+	literal Boolean "true" at (541, 743) size (49, 0) {
+		outPin {
+			connection_37
+		}
+	}
+	simpleIdentifier red at (621, 745) {
+		label at (0, -1)
+		inPin connection_37
+		outPin sequenceCall {
+			inPin connection_36 {
+				bendpoints (30, 0), (30, 60)
+			}
+		}
+	}
+	less at (411, 796) {
+		inPin connection_38 {
+			bendpoints (0, 290)
+		}
+		inPin connection_39
+		outPin {
+			connection_42
+		}
+	}
+	simpleIdentifier greenTime at (331, 815) {
+		label at (0, -1)
+		outPin {
+			connection_39
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	if at (471, 801) {
+		inPin connection_42
+		ifControlFlowOutPin {
+			connection_43
+		}
+		sequenceCall {
+			inPin connection_41 {
+				bendpoints (0, 90)
+			}
+		}
+	}
+	literal Boolean "true" at (561, 823) size (49, 0) {
+		outPin {
+			connection_44
+		}
+	}
+	if at (321, 871) {
+		inPin connection_48
+		ifControlFlowOutPin {
+			connection_11
+		}
+		sequenceCall {
+			inPin connection_45
+		}
+	}
+	greaterOrEqual at (261, 866) {
+		inPin connection_46 {
+			bendpoints (0, 360)
+		}
+		inPin connection_47
+		outPin {
+			connection_48
+		}
+	}
+	simpleIdentifier greenTime at (191, 885) {
+		label at (0, -1)
+		outPin {
+			connection_47
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier yellow at (941, 585) {
+		label at (0, -1)
+		inPin outPin {
+			connection_52
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier green at (941, 635) {
+		label at (0, -1)
+		inPin outPin {
+			connection_50
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier red at (941, 535) {
+		label at (0, -1)
+		inPin outPin {
+			connection_54
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier resources.TrafficLightMessages.redLight at (1051, 535) {
+		label at (0, -1)
+		inPin connection_54
+		sequenceCall {
+			inPin connection_53
+		}
+	}
+	simpleIdentifier resources.TrafficLightMessages.yellowLight at (1051, 585) {
+		label at (0, -1)
+		inPin connection_52
+		sequenceCall {
+			inPin connection_51
+		}
+	}
+	simpleIdentifier resources.TrafficLightMessages.greenLight at (1051, 635) {
+		label at (0, -1)
+		inPin connection_50
+		sequenceCall {
+			inPin connection_49
+		}
+	}
+	lessOrEqual at (301, 76) {
+		inPin connection_70
+		inPin connection_56
+		outPin {
+			connection_58
+		}
+	}
+	simpleIdentifier visibilityDistance at (251, 95) {
+		label at (0, -1)
+		outPin {
+			connection_56
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier resources.TrafficLightMessages.proximity at (481, 55) {
+		label at (0, -1)
+		inPin connection_73 {
+			bendpoints (40, 0), (40, -20)
+		}
+		sequenceCall at (-10, 26) {
+			inPin connection_72
+		}
+	}
+	ifElse at (371, 81) {
+		inPin connection_58
+		ifControlFlowOutPin {
+			connection_72
+		}
+		elseControlFlowOutPin {
+			connection_68
+		}
+		sequenceCall {
+			inPin connection_57
+		}
+	}
+	simpleIdentifier resources.TrafficLightMessages.proximity at (531, 135) {
+		label at (0, -1)
+		inPin connection_69
+		sequenceCall {
+			inPin connection_68
+		}
+	}
+	simpleIdentifier resources.CarMessages.dist at (21, 75) {
+		label at (0, -1)
+		outPin {
+			connection_71
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier notVisible at (441, 135) {
+		label at (0, -1)
+		outPin {
+			connection_69
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	complexIdentifier TrafficLightPositionModel_instance at (81, 71) size (14, 8) {
+		label at (0, 1)
+		methodCall TrafficLight.TrafficLightPositionModel.proximity {
+			argumentPin distance at (left, 0) connection_71
+			returnPin at (right, 0) {
+				connection_73, connection_70
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+	}
+	freeComment at (601, 71) {
+		"Rückgabe der Distanz zur nächsten Ampel wenn sichtbar (Abstand <= 100 m).\r\nIst der Abstand > 100m und die Ampel somit nicht sichtbar wird er auf den default von 99999 m gesetzt."
+	}
+	freeComment at (921, 491) {
+		"Ampelfarben senden"
+	}
+	freeComment at (41, 421) {
+		"Implementierung des Ampelzyklus, mit gelb: 3 s, rot:39 s, rotgelb:2 s und grün 16 s. Zurücksetzung der zeit per Stoppuhr nach 60 s, für neuen Zyklus"
+	}
+	freeComment at (51, 201) {
+		"Zu Beginn jedes Aufrufs Zurücksetzung, werden im Anschluss zeitabhängig neu gesetzt"
+	}
+	freeComment at (551, 941) {
+		"."
+	}
+}

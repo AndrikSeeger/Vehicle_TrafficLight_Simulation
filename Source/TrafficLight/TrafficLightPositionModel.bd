@@ -1,0 +1,268 @@
+classType TrafficLight.TrafficLightPositionModel
+blockdiagramSpecification Main {
+	methodBody proximity {
+		outPin active {
+			connection_31
+		}
+	}
+	greater at (181, 206) size (2, 5) {
+		inPin connection_23
+		inPin connection_10
+		outPin {
+			connection_4
+		}
+	}
+	ifElse at (251, 221) {
+		inPin connection_4
+		ifControlFlowOutPin {
+			connection_9
+		}
+		elseControlFlowOutPin {
+			connection_7
+		}
+		sequenceCall {
+			inPin connection_3 {
+				bendpoints (0, 70)
+			}
+		}
+	}
+	greater at (231, 336) size (2, 5) {
+		inPin connection_24
+		inPin connection_5
+		outPin {
+			connection_8
+		}
+	}
+	simpleIdentifier firstTrafficLight at (101, 375) {
+		label at (0, -1)
+		outPin {
+			connection_5
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	ifElse at (281, 351) {
+		inPin connection_8
+		ifControlFlowOutPin {
+			connection_15
+		}
+		elseControlFlowOutPin {
+			connection_19
+		}
+		sequenceCall {
+			inPin connection_7
+		}
+	}
+	return at (541, 255) {
+		label at (0, 0)
+		inPin connection_14
+		sequenceCall at (-10, -34) {
+			inPin connection_9
+		}
+	}
+	subtraction at (451, 246) size (2, 4) {
+		inPin connection_12
+		inPin connection_25
+		outPin {
+			connection_14
+		}
+	}
+	simpleIdentifier secondTrafficLight at (51, 245) {
+		label at (0, -1)
+		outPin {
+			connection_10
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier thirdTrafficLight at (311, 245) {
+		label at (0, -1)
+		outPin {
+			connection_12
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	subtraction at (481, 376) size (2, 4) {
+		inPin connection_17
+		inPin connection_26
+		outPin {
+			connection_18
+		}
+	}
+	return at (571, 385) {
+		label at (0, 0)
+		inPin connection_18
+		sequenceCall at (-10, -34) {
+			inPin connection_15
+		}
+	}
+	simpleIdentifier secondTrafficLight at (341, 375) {
+		label at (0, -1)
+		outPin {
+			connection_17
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	subtraction at (531, 506) size (2, 4) {
+		inPin connection_21
+		inPin connection_27
+		outPin {
+			connection_22
+		}
+	}
+	return at (621, 515) {
+		label at (0, 0)
+		inPin connection_22
+		sequenceCall at (-10, -34) {
+			inPin connection_19 {
+				bendpoints (0, 100)
+			}
+		}
+	}
+	simpleIdentifier firstTrafficLight at (391, 505) {
+		label at (0, -1)
+		outPin {
+			connection_21
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier proximity.distance at (51, 205) {
+		label at (0, -1)
+		outPin {
+			connection_23
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier proximity.distance at (101, 335) {
+		label at (0, -1)
+		outPin {
+			connection_24
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier proximity.distance at (311, 275) {
+		label at (0, -1)
+		outPin {
+			connection_25
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier proximity.distance at (341, 405) {
+		label at (0, -1)
+		outPin {
+			connection_26
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier proximity.distance at (391, 535) {
+		label at (0, -1)
+		outPin {
+			connection_27
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	freeComment at (121, 31) size (33, 5) {
+		"Implementierung der Ampelpostionen bei 300 m, 500 m und 900 m. Rückgabe der Distanz zur nächsten Ampel."
+	}
+	methodArgumentIdentifier proximity.distance at (11, 85) {
+		label at (0, -1)
+		outPin {
+			connection_28
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	greater at (151, 86) size (2, 5) {
+		inPin connection_28
+		inPin connection_30
+		outPin {
+			connection_32
+		}
+	}
+	simpleIdentifier thirdTrafficLight at (11, 125) {
+		label at (0, -1)
+		outPin {
+			connection_30
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	ifElse at (201, 101) {
+		inPin connection_32
+		ifControlFlowOutPin {
+			connection_33
+		}
+		elseControlFlowOutPin {
+			connection_3
+		}
+		sequenceCall {
+			inPin connection_31
+		}
+	}
+	subtraction at (481, 146) size (2, 5) {
+		inPin connection_36
+		inPin connection_35 {
+			bendpoints (100, 0)
+		}
+		outPin {
+			connection_34
+		}
+	}
+	methodArgumentIdentifier proximity.distance at (341, 185) {
+		label at (0, -1)
+		outPin {
+			connection_35
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	return at (571, 165) {
+		label at (0, 0)
+		inPin connection_34
+		sequenceCall at (-10, -64) {
+			inPin connection_33
+		}
+	}
+	addition at (431, 126) size (2, 5) {
+		inPin connection_39
+		inPin connection_38
+		outPin {
+			connection_36
+		}
+	}
+	literal unit resources.m "1000.0" at (301, 163) size (59, 0) {
+		outPin {
+			connection_38
+		}
+	}
+	simpleIdentifier firstTrafficLight at (301, 125) {
+		label at (0, -1)
+		outPin {
+			connection_39
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+}

@@ -1,0 +1,7 @@
+2228 = platform:/resource/TrafficLightProject/myCar/MyTurn.esdl#esdlLink_PackageDecl;;myCar/ClassType;definitions.0;MyTurn/MethodDecl;parts.7;move/StatementBlock;block;/IfStatement;statements.1;
+2327 = platform:/resource/TrafficLightProject/myCar/MyTurn.esdl#esdlLink_PackageDecl;;myCar/ClassType;definitions.0;MyTurn/MethodDecl;parts.7;move/StatementBlock;block;/IfStatement;statements.2;
+2088 = platform:/resource/TrafficLightProject/myCar/MyTurn.esdl#esdlLink_PackageDecl;;myCar/ClassType;definitions.0;MyTurn/MethodDecl;parts.7;move/StatementBlock;block;/SimpleAssign;statements.0;
+2264 = platform:/resource/TrafficLightProject/myCar/MyTurn.esdl#esdlLink_PackageDecl;;myCar/ClassType;definitions.0;MyTurn/MethodDecl;parts.7;move/StatementBlock;block;/IfStatement;statements.1;/StatementBlock;ifBlock;/SimpleAssign;statements.0;
+2427 = platform:/resource/TrafficLightProject/myCar/MyTurn.esdl#esdlLink_PackageDecl;;myCar/ClassType;definitions.0;MyTurn/MethodDecl;parts.7;move/StatementBlock;block;/SimpleAssign;statements.3;
+2364 = platform:/resource/TrafficLightProject/myCar/MyTurn.esdl#esdlLink_PackageDecl;;myCar/ClassType;definitions.0;MyTurn/MethodDecl;parts.7;move/StatementBlock;block;/IfStatement;statements.2;/StatementBlock;ifBlock;/SimpleAssign;statements.0;
+2526 = platform:/resource/TrafficLightProject/myCar/MyTurn.esdl#esdlLink_PackageDecl;;myCar/ClassType;definitions.0;MyTurn/MethodDecl;parts.7;move/StatementBlock;block;/SimpleAssign;statements.4;

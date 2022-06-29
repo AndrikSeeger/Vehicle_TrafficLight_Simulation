@@ -1,0 +1,228 @@
+classType TrafficLight.TrafficLightTestFunction
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active {
+			connection_63, connection_5
+		}
+	}
+	less at (361, 96) size (2, 4) {
+		inPin connection_59
+		inPin connection_18
+		outPin {
+			connection_16
+		}
+	}
+	ifElse at (431, 101) {
+		inPin connection_16
+		ifControlFlowOutPin {
+			connection_70
+		}
+		elseControlFlowOutPin {
+			connection_6
+		}
+		sequenceCall {
+			inPin connection_5
+		}
+	}
+	simpleIdentifier yellowTime at (291, 125) {
+		label at (0, -1)
+		outPin {
+			connection_18
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	less at (401, 186) {
+		inPin connection_60 {
+			bendpoints (20, 0), (20, 90)
+		}
+		inPin connection_27
+		outPin {
+			connection_26
+		}
+	}
+	simpleIdentifier redTime at (341, 205) {
+		label at (0, -1)
+		outPin {
+			connection_27
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	ifElse at (471, 191) {
+		inPin connection_26
+		ifControlFlowOutPin {
+			connection_72
+		}
+		elseControlFlowOutPin {
+			connection_7
+		}
+		sequenceCall {
+			inPin connection_6 {
+				bendpoints (0, 40)
+			}
+		}
+	}
+	less at (431, 266) {
+		inPin connection_61 {
+			bendpoints (20, 0), (20, 170)
+		}
+		inPin connection_31
+		outPin {
+			connection_30
+		}
+	}
+	simpleIdentifier redYellowTime at (351, 285) {
+		label at (0, -1)
+		outPin {
+			connection_31
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	ifElse at (511, 271) {
+		inPin connection_30
+		ifControlFlowOutPin {
+			connection_75
+		}
+		elseControlFlowOutPin {
+			connection_8
+		}
+		sequenceCall at (-10, -20) {
+			inPin connection_7 {
+				bendpoints (0, 30)
+			}
+		}
+	}
+	less at (491, 346) {
+		inPin connection_62 {
+			bendpoints (20, 0), (20, 250)
+		}
+		inPin connection_37
+		outPin {
+			connection_36
+		}
+	}
+	simpleIdentifier greenTime at (411, 365) {
+		label at (0, -1)
+		outPin {
+			connection_37
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	ifElse at (551, 351) {
+		inPin connection_36
+		ifControlFlowOutPin {
+			connection_78
+		}
+		elseControlFlowOutPin {
+			connection_94
+		}
+		sequenceCall {
+			inPin connection_8 {
+				bendpoints (0, 30)
+			}
+		}
+	}
+	methodArgumentIdentifier calc.stime at (101, 95) {
+		label at (-70, -1)
+		outPin {
+			connection_64
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier time at (151, 95) {
+		label at (0, -1)
+		inPin connection_64
+		outPin {
+			connection_62, connection_60, connection_61, connection_59
+		}
+		sequenceCall {
+			inPin connection_63
+		}
+	}
+	return at (581, 125) {
+		label at (0, 0)
+		inPin connection_71
+		sequenceCall {
+			inPin connection_70
+		}
+	}
+	literal Numeric "1" at (491, 123) size (49, 0) {
+		outPin {
+			connection_71
+		}
+	}
+	literal Numeric "2" at (521, 213) size (49, 0) {
+		outPin {
+			connection_74
+		}
+	}
+	return at (611, 215) {
+		label at (-10, 0)
+		inPin connection_74
+		sequenceCall {
+			inPin connection_72
+		}
+	}
+	literal Numeric "3" at (581, 293) size (49, 0) {
+		outPin {
+			connection_77
+		}
+	}
+	return at (651, 295) {
+		label at (0, 0)
+		inPin connection_77
+		sequenceCall {
+			inPin connection_75
+		}
+	}
+	literal Numeric "4" at (621, 373) size (49, 0) {
+		outPin {
+			connection_80
+		}
+	}
+	return at (711, 375) {
+		label at (0, 0)
+		inPin connection_80
+		sequenceCall {
+			inPin connection_78
+		}
+	}
+	freeComment at (651, 111) {
+		"yellow"
+	}
+	freeComment at (671, 201) {
+		"red"
+	}
+	freeComment at (701, 291) {
+		"red & yellow"
+	}
+	freeComment at (791, 371) {
+		"green"
+	}
+	freeComment at (821, 431) {
+		"reset\r\n"
+	}
+	literal Numeric "5" at (651, 433) size (49, 0) {
+		outPin {
+			connection_95
+		}
+	}
+	return at (741, 435) {
+		label at (0, 0)
+		inPin connection_95
+		sequenceCall {
+			inPin connection_94 {
+				bendpoints (0, 30)
+			}
+		}
+	}
+}

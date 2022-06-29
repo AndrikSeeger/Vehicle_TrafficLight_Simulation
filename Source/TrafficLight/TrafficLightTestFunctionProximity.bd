@@ -1,0 +1,82 @@
+classType TrafficLight.TrafficLightTestFunctionProximity
+blockdiagramSpecification Main {
+	methodBody proximity {
+		outPin active {
+			connection_1
+		}
+	}
+	simpleIdentifier notVisible at (561, 115) {
+		label at (0, -1)
+		outPin {
+			connection_15
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	lessOrEqual at (431, 56) {
+		inPin connection_9
+		inPin connection_6
+		outPin {
+			connection_5
+		}
+	}
+	simpleIdentifier visibilityDistance at (321, 75) {
+		label at (0, -1)
+		outPin {
+			connection_6
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	complexIdentifier TrafficLightPositionModel_instance at (121, 51) size (14, 8) {
+		label at (0, 1)
+		methodCall TrafficLight.TrafficLightPositionModel.proximity {
+			argumentPin distance at (left, 0) connection_12
+			returnPin at (right, 0) {
+				connection_16, connection_9
+			}
+			sequenceCall at (0, 6) {
+				inPin
+			}
+		}
+	}
+	ifElse at (501, 61) {
+		inPin connection_5
+		ifControlFlowOutPin {
+			connection_13
+		}
+		elseControlFlowOutPin {
+			connection_14
+		}
+		sequenceCall {
+			inPin connection_1
+		}
+	}
+	methodArgumentIdentifier proximity.dist at (11, 55) {
+		label at (0, -1)
+		outPin {
+			connection_12
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	return at (621, 35) {
+		label at (0, 0)
+		inPin connection_16 {
+			bendpoints (0, -20)
+		}
+		sequenceCall at (0, 26) {
+			inPin connection_13
+		}
+	}
+	return at (631, 115) {
+		label at (0, 0)
+		inPin connection_15
+		sequenceCall {
+			inPin connection_14
+		}
+	}
+}

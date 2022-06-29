@@ -1,0 +1,3 @@
+3680 = platform:/resource/SystemLib/SystemLib/CounterTimer/Timer.esdl#esdlLink_PackageDecl;;SystemLib.CounterTimer/ClassType;definitions.0;Timer/MethodDecl;parts.2;value/StatementBlock;block;/ReturnStatement;statements.0;
+1970 = platform:/resource/SystemLib/SystemLib/CounterTimer/Timer.esdl#esdlLink_PackageDecl;;SystemLib.CounterTimer/ClassType;definitions.0;Timer/MethodDecl;parts.3;begin/StatementBlock;block;/SimpleAssign;statements.0;
+2796 = platform:/resource/SystemLib/SystemLib/CounterTimer/Timer.esdl#esdlLink_PackageDecl;;SystemLib.CounterTimer/ClassType;definitions.0;Timer/MethodDecl;parts.1;compute/StatementBlock;block;/SimpleAssign;statements.0;

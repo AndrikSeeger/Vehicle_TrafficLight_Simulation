@@ -1,0 +1,3 @@
+1858 = platform:/resource/TrafficLightProject/RisingEdge/Rising.esdl#esdlLink_PackageDecl;;RisingEdge/ClassType;definitions.0;Rising/MethodDecl;parts.3;calc/StatementBlock;block;/SimpleAssign;statements.1;
+1815 = platform:/resource/TrafficLightProject/RisingEdge/Rising.esdl#esdlLink_PackageDecl;;RisingEdge/ClassType;definitions.0;Rising/MethodDecl;parts.3;calc/StatementBlock;block;/IfStatement;statements.0;
+1883 = platform:/resource/TrafficLightProject/RisingEdge/Rising.esdl#esdlLink_PackageDecl;;RisingEdge/ClassType;definitions.0;Rising/MethodDecl;parts.3;calc/StatementBlock;block;/ReturnStatement;statements.2;

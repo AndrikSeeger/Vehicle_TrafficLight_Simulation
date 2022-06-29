@@ -1,0 +1,17 @@
+Component         myCar.MyTurn size ( 14 , 8 ) {
+	labelPosition ( 0 , 1 )
+	methodLayout move {
+		pin beta ( Left , 3 )
+		pin v ( Left , 0 )
+		pin mydt ( Left , 6 )
+	}
+	memberLayout x {
+		getPinPosition ( Right , 1 )
+	}
+	memberLayout y {
+		getPinPosition ( Right , 5 )
+	}
+	memberLayout bearing {
+		getPinPosition ( Top , 6 )
+	}
+}

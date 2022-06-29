@@ -1,0 +1,252 @@
+classType Driver.DrivingDecisionTestFunction
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active {
+			connection_7, connection_1
+		}
+	}
+	simpleIdentifier anhalteweg at (31, 375) {
+		label at (0, -1)
+		inPin outPin {
+			connection_2
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	complexIdentifier Driver.CruiseSpeedControl at (471, 541) size (14, 8) {
+		label at (0, 1)
+		methodCall Driver.CruiseSpeedControl.calc {
+			argumentPin targetSpeed at (left, 0) connection_33
+			argumentPin v at (left, 3) connection_26
+			sequenceCall at (0, -34) {
+				inPin connection_35 {
+					bendpoints (0, 150)
+				}
+			}
+		}
+		elementCall (Driver.CruiseSpeedControl.brake) {
+			returnPin at (right, 0) sequenceCall at (0, 0) {
+				inPin
+			}
+		}
+		elementCall (Driver.CruiseSpeedControl.power) {
+			returnPin at (right, 5) {
+				connection_37
+			}
+			sequenceCall at (0, 0) {
+				inPin
+			}
+		}
+	}
+	division at (221, 76) size (2, 7) {
+		inPin connection_10
+		inPin connection_31
+		outPin {
+			connection_8
+		}
+	}
+	multiplication at (161, 66) size (2, 4) {
+		inPin connection_29
+		inPin connection_28 {
+			bendpoints (100, 0)
+		}
+		outPin {
+			connection_10
+		}
+	}
+	and at (311, 206) size (2, 27) {
+		inPin connection_12
+		inPin connection_25 {
+			bendpoints (40, 0)
+		}
+		inPin connection_15
+		outPin {
+			connection_11
+		}
+	}
+	lessOrEqual at (191, 176) size (2, 8) {
+		inPin connection_30
+		inPin connection_27
+		outPin {
+			connection_12
+		}
+	}
+	simpleIdentifier deltaBrake at (41, 265) {
+		label at (0, -1)
+		outPin {
+			connection_14
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	or at (231, 456) size (2, 4) {
+		inPin connection_17
+		inPin connection_9
+		outPin {
+			connection_15
+		}
+	}
+	simpleIdentifier anhalteweg at (31, 225) {
+		label at (0, -1)
+		inPin outPin {
+			connection_16
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	complexIdentifier Driver.CruiseSpeedControl at (521, 361) size (14, 8) {
+		label at (0, 1)
+		methodCall Driver.CruiseSpeedControl.calc {
+			argumentPin targetSpeed at (left, 0) connection_24
+			argumentPin v at (left, 3) connection_13
+			sequenceCall at (0, -34) {
+				inPin connection_34
+			}
+		}
+		elementCall (Driver.CruiseSpeedControl.brake) {
+			returnPin at (right, 0) {
+				connection_39
+			}
+			sequenceCall at (0, 0) {
+				inPin
+			}
+		}
+		elementCall (Driver.CruiseSpeedControl.power) {
+			returnPin at (right, 5) sequenceCall at (0, 0) {
+				inPin
+			}
+		}
+	}
+	literal unit resources.kmh "0.0" at (411, 363) size (49, 0) {
+		outPin {
+			connection_24
+		}
+	}
+	greater at (231, 306) size (2, 8) {
+		inPin connection_18
+		inPin connection_2
+		outPin {
+			connection_25
+		}
+	}
+	addition at (141, 226) size (2, 5) {
+		inPin connection_16
+		inPin connection_14
+		outPin {
+			connection_27
+		}
+	}
+	literal unit resources.a "4.91" at (151, 133) size (49, 0) {
+		outPin {
+			connection_31
+		}
+	}
+	literal unit resources.kmh "50.0" at (361, 543) size (49, 0) {
+		outPin {
+			connection_33
+		}
+	}
+	simpleIdentifier anhalteweg at (271, 105) {
+		label at (0, -1)
+		inPin connection_8
+		outPin sequenceCall {
+			inPin connection_7
+		}
+	}
+	ifElse at (361, 331) {
+		inPin connection_11
+		ifControlFlowOutPin {
+			connection_34, connection_38
+		}
+		elseControlFlowOutPin {
+			connection_35, connection_36
+		}
+		sequenceCall {
+			inPin connection_1
+		}
+	}
+	return at (651, 595) {
+		label at (0, 0)
+		inPin connection_37
+		sequenceCall at (0, -24) {
+			inPin connection_36 {
+				bendpoints (0, 130), (270, 130)
+			}
+		}
+	}
+	return at (681, 365) {
+		label at (0, 0)
+		inPin connection_39
+		sequenceCall at (-10, -24) {
+			inPin connection_38 {
+				bendpoints (0, -20), (250, -20), (250, 10)
+			}
+		}
+	}
+	methodArgumentIdentifier calc.velocity at (21, 65) {
+		label at (0, -1)
+		outPin {
+			connection_29, connection_28
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier calc.proximity at (41, 175) {
+		label at (0, -1)
+		outPin {
+			connection_30
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier calc.redLight at (41, 455) {
+		label at (0, -1)
+		outPin {
+			connection_17
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier calc.yellowLight at (41, 485) {
+		label at (0, -1)
+		outPin {
+			connection_9
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier calc.proximity at (41, 305) {
+		label at (0, -1)
+		outPin {
+			connection_18
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier calc.velocity at (361, 575) {
+		label at (0, -1)
+		outPin {
+			connection_26
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier calc.velocity at (411, 395) {
+		label at (0, -1)
+		outPin {
+			connection_13
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+}

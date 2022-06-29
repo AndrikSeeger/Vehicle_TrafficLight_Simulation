@@ -1,0 +1,3 @@
+2688 = platform:/resource/SystemLib/SystemLib/CounterTimer/StopWatch.esdl#esdlLink_PackageDecl;;SystemLib.CounterTimer/ClassType;definitions.0;StopWatch/MethodDecl;parts.3;reset/StatementBlock;block;/SimpleAssign;statements.0;
+3521 = platform:/resource/SystemLib/SystemLib/CounterTimer/StopWatch.esdl#esdlLink_PackageDecl;;SystemLib.CounterTimer/ClassType;definitions.0;StopWatch/MethodDecl;parts.2;value/StatementBlock;block;/ReturnStatement;statements.0;
+1835 = platform:/resource/SystemLib/SystemLib/CounterTimer/StopWatch.esdl#esdlLink_PackageDecl;;SystemLib.CounterTimer/ClassType;definitions.0;StopWatch/MethodDecl;parts.1;compute/StatementBlock;block;/SimpleAssign;statements.0;

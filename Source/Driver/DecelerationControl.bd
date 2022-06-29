@@ -1,0 +1,271 @@
+classType Driver.DecelerationControl
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active {
+			connection_15, connection_1, connection_23, connection_35, connection_31, connection_44, connection_40
+		}
+	}
+	simpleIdentifier resources.CarMessages.v at (41, 145) {
+		label at (0, -1)
+		outPin {
+			connection_4, connection_25, connection_2
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier oldSpeed at (221, 145) {
+		label at (0, -1)
+		inPin connection_2
+		outPin {
+			connection_3
+		}
+		sequenceCall {
+			inPin connection_1
+		}
+	}
+	subtraction at (331, 46) size (2, 11) {
+		inPin connection_4 {
+			bendpoints (60, 0), (60, -100)
+		}
+		inPin connection_3
+		outPin {
+			connection_13
+		}
+	}
+	simpleIdentifier accel at (481, 175) {
+		label at (0, -1)
+		inPin connection_16
+		outPin {
+			connection_21
+		}
+		sequenceCall {
+			inPin connection_15
+		}
+	}
+	simpleIdentifier SystemLib.Miscellaneous.DeltaTimeService.deltaT at (291, 235) {
+		label at (0, -1)
+		inPin outPin {
+			connection_11
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	multiplication at (371, 236) size (2, 7) {
+		inPin connection_11
+		inPin connection_12
+		outPin {
+			connection_14
+		}
+	}
+	literal unit resources.s "1.0" at (301, 293) size (49, 0) {
+		outPin {
+			connection_12
+		}
+	}
+	division at (421, 96) size (2, 18) {
+		inPin connection_13
+		inPin connection_14
+		outPin {
+			connection_16
+		}
+	}
+	greaterOrEqual at (571, 176) size (2, 5) {
+		inPin connection_21
+		inPin connection_22 {
+			bendpoints (40, 0)
+		}
+		outPin {
+			connection_24
+		}
+	}
+	simpleIdentifier accBelowLimit at (631, 195) {
+		label at (0, -1)
+		inPin connection_24
+		outPin sequenceCall {
+			inPin connection_23
+		}
+	}
+	simpleIdentifier limit at (491, 215) {
+		label at (0, -1)
+		outPin {
+			connection_22
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier BrakeMomentum at (171, 521) {
+		label at (0, 1)
+		inPin connection_37
+		outPin {
+			connection_27
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier AirFriction at (171, 441) {
+		label at (0, 1)
+		inPin connection_25 {
+			bendpoints (60, 0), (60, 310)
+		}
+		outPin {
+			connection_26
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	addition at (361, 456) size (2, 9) {
+		inPin connection_26
+		inPin connection_27
+		outPin {
+			connection_36
+		}
+	}
+	simpleIdentifier resources.CarMessages.brake at (31, 535) {
+		label at (0, -1)
+		outPin {
+			connection_37
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier limit at (451, 525) {
+		label at (0, -1)
+		outPin {
+			connection_30
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	greaterOrEqual at (521, 496) size (2, 4) {
+		inPin connection_29
+		inPin connection_30
+		outPin {
+			connection_32
+		}
+	}
+	simpleIdentifier accBelowLimitCalc at (581, 505) {
+		label at (0, -1)
+		inPin connection_32
+		outPin sequenceCall {
+			inPin connection_31
+		}
+	}
+	simpleIdentifier accelCalc at (441, 495) {
+		label at (0, -1)
+		inPin connection_36
+		outPin {
+			connection_29
+		}
+		sequenceCall {
+			inPin connection_35
+		}
+	}
+	freeComment at (371, 51) {
+		"Berechung der aktuellen Beschleunigung über die Geschwindigkeitsänderung, muss größer gleich -2.5 m/s^2 sein"
+	}
+	freeComment at (251, 411) {
+		"Bei Bremsung theoretische Berechnung der Beschleunigung über Bremsmoment und Luftwiderstand, muss größer gleich -2.5 m/s^2 sein"
+	}
+	greaterOrEqual at (591, 706) size (2, 4) {
+		inPin connection_50
+		inPin connection_38
+		outPin {
+			connection_41
+		}
+	}
+	simpleIdentifier limit at (521, 735) {
+		label at (0, -1)
+		outPin {
+			connection_38
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier accBelowLimitReal at (651, 715) {
+		label at (0, -1)
+		inPin connection_41
+		outPin sequenceCall {
+			inPin connection_40
+		}
+	}
+	freeComment at (431, 661) {
+		"Kontrolle der tatsächlichen Beschleunigung im Fahrzeugmodell, muss größer gleich -2.5 m/s^2 sein\r\n"
+	}
+	greater at (121, 666) size (2, 5) {
+		inPin connection_42
+		inPin connection_43
+		outPin {
+			connection_45
+		}
+	}
+	simpleIdentifier resources.CarMessages.v at (51, 665) {
+		label at (0, -1)
+		outPin {
+			connection_42
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	literal unit resources.kmh "0.0" at (51, 703) size (49, 0) {
+		outPin {
+			connection_43
+		}
+	}
+	ifElse at (181, 681) {
+		inPin connection_45
+		ifControlFlowOutPin {
+			connection_46
+		}
+		elseControlFlowOutPin {
+			connection_48
+		}
+		sequenceCall {
+			inPin connection_44
+		}
+	}
+	simpleIdentifier carAccel at (341, 705) {
+		label at (0, -1)
+		inPin connection_47
+		outPin {
+			connection_50
+		}
+		sequenceCall {
+			inPin connection_46
+		}
+	}
+	simpleIdentifier resources.CarMessages.theorAccel at (251, 705) {
+		label at (0, -1)
+		outPin {
+			connection_47
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier carAccel at (341, 765) {
+		label at (0, -1)
+		inPin connection_49
+		outPin sequenceCall {
+			inPin connection_48 {
+				bendpoints (0, 30)
+			}
+		}
+	}
+	literal unit resources.a "0.0" at (241, 763) size (49, 0) {
+		outPin {
+			connection_49
+		}
+	}
+	freeComment at (21, 611) {
+		"Wenn Fahrzeug steht theoretische Fahrzeugbeschleunigung (theorAccel) je nach Bremspedalstellung immernoch vorhanden. Korrektur auf reale Fahrzeugbeschleunigung, welche im Stand 0 ist."
+	}
+}

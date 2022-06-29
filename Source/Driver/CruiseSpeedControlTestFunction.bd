@@ -1,0 +1,174 @@
+classType Driver.CruiseSpeedControlTestFunction
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active {
+			connection_1
+		}
+	}
+	methodArgumentIdentifier calc.targetSpeed at (31, 75) {
+		label at (0, -1)
+		outPin {
+			connection_2
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	addition at (391, 246) size (2, 6) {
+		inPin connection_9
+		inPin connection_15
+		outPin {
+			connection_3
+		}
+	}
+	literal Numeric "100.0" at (341, 73) size (49, 0) {
+		outPin {
+			connection_5
+		}
+	}
+	multiplication at (581, 226) size (2, 5) {
+		inPin connection_12
+		inPin connection_18 {
+			bendpoints (20, 0)
+		}
+		outPin {
+			connection_7
+		}
+	}
+	less at (181, 36) size (2, 5) {
+		inPin connection_17
+		inPin connection_2
+		outPin {
+			connection_8
+		}
+	}
+	simpleIdentifier maxDecel at (211, 245) {
+		label at (0, -1)
+		outPin {
+			connection_9
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	literal Numeric "0.0" at (341, 183) size (49, 0) {
+		outPin {
+			connection_11
+		}
+	}
+	simpleIdentifier fak at (501, 225) {
+		label at (0, -1)
+		outPin {
+			connection_12
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	literal Numeric "0.0" at (341, 123) size (49, 0) {
+		outPin {
+			connection_14
+		}
+	}
+	simpleIdentifier AirFriction at (251, 281) {
+		label at (0, 1)
+		inPin connection_16 {
+			bendpoints (0, -20), (-60, -20), (-60, 260)
+		}
+		outPin {
+			connection_15
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier calc.v at (31, 35) {
+		label at (0, -1)
+		outPin {
+			connection_17, connection_16
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier BrakePedal at (501, 251) {
+		label at (0, 1)
+		inPin connection_3
+		outPin {
+			connection_18
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier power at (421, 75) {
+		label at (0, -1)
+		inPin connection_5
+		outPin {
+			connection_24
+		}
+		sequenceCall {
+			inPin connection_19
+		}
+	}
+	simpleIdentifier power at (421, 185) {
+		label at (0, -1)
+		inPin connection_11
+		outPin sequenceCall at (-10, -24) {
+			inPin connection_21 {
+				bendpoints (0, 80)
+			}
+		}
+	}
+	ifElse at (261, 51) {
+		inPin connection_8
+		ifControlFlowOutPin {
+			connection_19, connection_20, connection_23
+		}
+		elseControlFlowOutPin {
+			connection_21, connection_22, connection_25
+		}
+		sequenceCall {
+			inPin connection_1
+		}
+	}
+	simpleIdentifier brake at (631, 245) {
+		label at (0, -1)
+		inPin connection_7
+		outPin {
+			connection_32
+		}
+		sequenceCall at (-10, -24) {
+			inPin connection_22 {
+				bendpoints (0, 120), (340, 120)
+			}
+		}
+	}
+	simpleIdentifier brake at (421, 125) {
+		label at (0, -1)
+		inPin connection_14
+		outPin sequenceCall {
+			inPin connection_20 {
+				bendpoints (10, 0), (10, 50)
+			}
+		}
+	}
+	return at (511, 75) {
+		label at (0, 0)
+		inPin connection_24
+		sequenceCall at (0, -44) {
+			inPin connection_23 {
+				bendpoints (10, 0), (10, -20)
+			}
+		}
+	}
+	return at (731, 245) {
+		label at (0, 0)
+		inPin connection_32
+		sequenceCall at (-10, -44) {
+			inPin connection_25 {
+				bendpoints (0, 120)
+			}
+		}
+	}
+}

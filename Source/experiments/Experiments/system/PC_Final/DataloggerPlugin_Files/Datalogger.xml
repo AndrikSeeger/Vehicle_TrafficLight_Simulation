@@ -1,0 +1,19 @@
+<?SCHEMA schemaVersion="1.0"?>
+<DataloggerData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Program%20Files%20(x86)/Common%20Files/ETAS/Experiment%20Environment/3.7/Schemas/EE.Data.Datalogger.xsd" xsi:type="ETAS.EE.Data.DataloggerType">
+  <DataloggerCombinations xsi:type="ETAS.EE.Data.DataloggerCombinationListType">
+    <DataloggerCombinationData xsi:type="ETAS.EE.Data.DataloggerCombinationType" id="ID72807dbd-6471-4765-8fe8-8602beac9670" name="New Datalogger 1" numberOfAutomaticRestarts="0">
+      <recordingSignals xsi:type="ETAS.EE.Data.RecordingSignalListType">
+        <recordingSignal xsi:type="ETAS.EE.Data.RecordingSignalType" id="ID968d5846-8235-444d-a376-62b6bdb0823f" label="resources.CarMessages.power" signalSourceID="System" SignalSourceType="VP" task="Task0" enabled="false">
+          <userDefinedLabels xsi:type="ETAS.EE.Data.UserDefinedLabelListType" />
+        </recordingSignal>
+      </recordingSignals>
+      <startTriggerFilterTemplate xsi:type="ETAS.EE.Data.DLFilterTemplateType" id="IDee750dfc-f721-497b-8e20-dffe58b40a07" name="Default Start" inActiveBehaviour="Block" activeBehaviour="Block" triggerOccuredBehaviour="Pass" postTime="0" preTime="0">
+        <operand1 xsi:type="ETAS.EE.Data.RecordingSignalRefType" />
+      </startTriggerFilterTemplate>
+      <stopTriggerFilterTemplate xsi:type="ETAS.EE.Data.DLFilterTemplateType" id="IDa51eba92-6517-4d39-b8c3-3cfca6e330c4" name="Default Stop" inActiveBehaviour="Pass" activeBehaviour="Block" triggerOccuredBehaviour="Block" postTime="0">
+        <operand1 xsi:type="ETAS.EE.Data.RecordingSignalRefType" />
+      </stopTriggerFilterTemplate>
+      <recordingFileConfiguration xsi:type="ETAS.EE.Data.RecordingFileConfigurationType" file=".\New Datalogger 1_DataRecording.dat" autoIncrement="true" numberOfDigits="4" fileType="MDF" />
+    </DataloggerCombinationData>
+  </DataloggerCombinations>
+</DataloggerData>

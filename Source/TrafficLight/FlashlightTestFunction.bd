@@ -1,0 +1,159 @@
+classType TrafficLight.FlashlightTestFunction
+blockdiagramSpecification calc_spec {
+	methodBody calc {
+		outPin active {
+			connection_45, connection_79, connection_46
+		}
+	}
+	methodArgumentIdentifier calc.proximity at (21, 15) {
+		label at (0, -1)
+		outPin {
+			connection_63
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier calc.redLight at (21, 135) {
+		label at (0, -1)
+		outPin {
+			connection_64
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	return at (1001, 135) {
+		label at (0, 0)
+		inPin connection_61
+		sequenceCall {
+			inPin LConnection__J5Zr5rTBEeyRb7q9iD680w
+		}
+	}
+	return at (1011, 195) {
+		label at (0, 0)
+		inPin connection_62
+		sequenceCall {
+			inPin LConnection__J5Zr6LTBEeyRb7q9iD680w {
+				bendpoints (0, 30)
+			}
+		}
+	}
+	and at (341, 16) size (2, 13) {
+		inPin connection_53
+		inPin connection_64
+		outPin {
+			connection_47
+		}
+	}
+	literal Boolean "false" at (871, 193) size (49, 0) {
+		outPin {
+			connection_62
+		}
+	}
+	literal Boolean "true" at (871, 133) size (49, 0) {
+		outPin {
+			connection_61
+		}
+	}
+	complexIdentifier Rising_instance at (161, 11) size (14, 8) {
+		label at (0, 1)
+		methodCall RisingEdge.Rising.calc {
+			argumentPin arg at (left, 0) connection_63
+			returnPin at (right, 0) {
+				connection_53
+			}
+			sequenceCall at (0, 6) {
+				inPin
+			}
+		}
+	}
+	literal Numeric "1.0" at (461, 93) size (49, 0) {
+		outPin {
+			connection_74
+		}
+	}
+	if at (401, 71) {
+		inPin connection_47
+		ifControlFlowOutPin {
+			connection_73
+		}
+		sequenceCall {
+			inPin connection_45
+		}
+	}
+	ifElse at (811, 111) {
+		inPin connection_77
+		ifControlFlowOutPin {
+			LConnection__J5Zr5rTBEeyRb7q9iD680w
+		}
+		elseControlFlowOutPin {
+			LConnection__J5Zr6LTBEeyRb7q9iD680w
+		}
+		sequenceCall {
+			inPin connection_46
+		}
+	}
+	literal Numeric "0.0" at (641, 233) size (49, 0) {
+		outPin {
+			connection_66
+		}
+	}
+	subtraction at (561, 196) {
+		inPin connection_81 {
+			bendpoints (50, 0), (50, 50), (-440, 50), (-440, -20)
+		}
+		inPin connection_71
+		outPin {
+			connection_67
+		}
+	}
+	maximum at (711, 206) size (2, 4) {
+		inPin connection_67
+		inPin connection_66
+		outPin {
+			connection_80
+		}
+	}
+	literal Numeric "0.0" at (561, 133) size (49, 0) {
+		outPin {
+			connection_70
+		}
+	}
+	greater at (711, 96) size (2, 5) {
+		inPin connection_76
+		inPin connection_70
+		outPin {
+			connection_77
+		}
+	}
+	simpleIdentifier timeCounter at (551, 95) {
+		label at (0, -1)
+		inPin connection_74
+		outPin {
+			connection_76
+		}
+		sequenceCall at (-10, -24) {
+			inPin connection_73
+		}
+	}
+	simpleIdentifier constDeltaT at (441, 215) {
+		label at (0, -1)
+		outPin {
+			connection_71
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier timeCounter at (781, 215) {
+		label at (0, -1)
+		inPin connection_80
+		outPin {
+			connection_81
+		}
+		sequenceCall {
+			inPin connection_79
+		}
+	}
+}

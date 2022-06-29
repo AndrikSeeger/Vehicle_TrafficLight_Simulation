@@ -1,0 +1,122 @@
+classType TrafficLight.Flashlight
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active {
+			connection_6, connection_7, connection_8
+		}
+	}
+	simpleIdentifier resources.TrafficLightMessages.proximity at (11, 55) {
+		label at (0, -1)
+		outPin {
+			connection_15
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier resources.TrafficLightMessages.redLight at (11, 175) {
+		label at (0, -1)
+		outPin {
+			connection_16
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier resources.TrafficLightMessages.flashLight at (791, 195) {
+		label at (0, -1)
+		inPin connection_18
+		sequenceCall {
+			inPin connection_17
+		}
+	}
+	literal Boolean "true" at (701, 193) size (49, 0) {
+		outPin {
+			connection_18
+		}
+	}
+	literal Boolean "false" at (701, 253) size (49, 0) {
+		outPin {
+			connection_20
+		}
+	}
+	literal Numeric "1.0" at (431, 143) size (49, 0) {
+		outPin {
+			connection_10
+		}
+	}
+	and at (301, 56) size (2, 13) {
+		inPin connection_12
+		inPin connection_16
+		outPin {
+			connection_11
+		}
+	}
+	complexIdentifier Rising_instance at (111, 51) size (14, 8) {
+		label at (0, 1)
+		methodCall RisingEdge.Rising.calc {
+			argumentPin arg at (left, 0) connection_15
+			returnPin at (right, 0) {
+				connection_12
+			}
+			sequenceCall at (0, 6) {
+				inPin
+			}
+		}
+	}
+	complexIdentifier Timer_instance at (531, 161) size (5, 3) backgroundColor #ffffff {
+		label at (0, 1)
+		methodCall SystemLib.CounterTimer.Timer.begin {
+			argumentPin startTime at (top, 2) connection_10
+			sequenceCall at (-24, -40) {
+				inPin connection_14
+			}
+		}
+		methodCall SystemLib.CounterTimer.Timer.compute {
+			methodVoidPin at (left, 1) sequenceCall at (-60, -14) {
+				inPin connection_6
+			}
+		}
+		methodCall SystemLib.CounterTimer.Timer.value {
+			returnPin at (right, 1) {
+				connection_13
+			}
+			sequenceCall at (0, 0) {
+				inPin
+			}
+		}
+	}
+	if at (361, 111) {
+		inPin connection_11
+		ifControlFlowOutPin {
+			connection_14
+		}
+		sequenceCall {
+			inPin connection_7
+		}
+	}
+	ifElse at (641, 171) {
+		inPin connection_13
+		ifControlFlowOutPin {
+			connection_17
+		}
+		elseControlFlowOutPin {
+			connection_19
+		}
+		sequenceCall {
+			inPin connection_8
+		}
+	}
+	simpleIdentifier resources.TrafficLightMessages.flashLight at (791, 255) {
+		label at (0, -1)
+		inPin connection_20
+		sequenceCall {
+			inPin connection_19 {
+				bendpoints (0, 30)
+			}
+		}
+	}
+	freeComment at (411, 61) {
+		"Wenn Ampel rot und Ampel überfahren wird (Proximity springt von 0 auf positive Zahl hier: von 0 auf 99999 da Ampeln nicht direkt sichtbar), dann für 1s Blitzlicht (flashlLight) true"
+	}
+}

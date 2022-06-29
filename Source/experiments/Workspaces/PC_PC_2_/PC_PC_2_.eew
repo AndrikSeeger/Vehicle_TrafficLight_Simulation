@@ -1,0 +1,22 @@
+<?SCHEMA schemaVersion="1.0"?>
+<Workspace xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Program%20Files%20(x86)/Common%20Files/ETAS/Experiment%20Environment/3.7/Schemas/EE.Data.Workspace.xsd" xsi:type="ETAS.EE.Data.WorkspaceType">
+  <PluginData xsi:type="ETAS.EE.Data.PluginDataListType">
+    <Item xsi:type="ETAS.EE.Data.PluginDataType" id="IDed2a481a-3365-41cb-a96b-929b66ddc92b" pluginID="Options" rootFolder="Options_Files">
+      <Documents xsi:type="ETAS.EE.Data.ExternalDocumentListType">
+        <Item xsi:type="ETAS.EE.Data.ExternalDocumentType" id="ID7fc766c1-59dd-4173-bdc8-5c6a001b9d2a" type="" name="Options" file="Options.opt" />
+      </Documents>
+    </Item>
+    <Item xsi:type="ETAS.EE.Data.PluginDataType" id="IDae5adcab-d929-4bac-8295-fdc7d2af7cc4" pluginID="SignalSourceManager" rootFolder="SignalSourceManager_Files">
+      <Documents xsi:type="ETAS.EE.Data.ExternalDocumentListType">
+        <Item xsi:type="ETAS.EE.Data.ExternalDocumentType" id="ID4be0e644-8e36-4583-aea8-fadf79e283a9" type="" name="SignalSourcesData" file="SignalSources.xml" />
+      </Documents>
+    </Item>
+  </PluginData>
+  <RecentExperiments xsi:type="ETAS.EE.Data.FileReferenceListType">
+    <Item xsi:type="ETAS.EE.Data.FileReferenceType" id="ID043d84ba-87a7-438a-845b-a8dff4f6bef7" path="C:\AscetProjects\TrafficLightProject\experiments\Experiments\system\PC_PC_2_\PC_PC_2_.eex" hintPath="..\..\Experiments\system\PC_PC_2_\PC_PC_2_.eex" />
+  </RecentExperiments>
+  <WorkspaceInfo xsi:type="ETAS.EE.Data.WorkspaceInfoType">
+    <DateTime xsi:type="ETAS.EE.Data.DateTimeInfoType" id="IDede2729d-db61-4488-97fb-b4912a41a28e" Created="2022-04-05T11:51:38.329Z" LastOpened="2022-04-05T12:23:55.735Z" LastSaved="2022-04-05T12:27:59.724Z" />
+    <Version xsi:type="ETAS.EE.Data.VersionInfoType" id="ID0d228a3b-ad09-4d40-a1a9-da9666ca70e1" Created="3.7.10.314" LastSaved="3.7.10.314" MinRequired="3.3.1" />
+  </WorkspaceInfo>
+</Workspace>

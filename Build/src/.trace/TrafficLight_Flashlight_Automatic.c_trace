@@ -1,0 +1,4 @@
+6017 = platform:/resource/TrafficLightProject/TrafficLight/Flashlight.esdl#esdlLink_PackageDecl;;TrafficLight/ClassType;definitions.0;Flashlight/MethodDecl;parts.2;calc/StatementBlock;block;/IfStatement;statements.1;/StatementBlock;ifBlock;/CompositeIdentifierAccess;statements.0;
+5707 = platform:/resource/TrafficLightProject/TrafficLight/Flashlight.esdl#esdlLink_PackageDecl;;TrafficLight/ClassType;definitions.0;Flashlight/MethodDecl;parts.2;calc/StatementBlock;block;/CompositeIdentifierAccess;statements.0;
+6109 = platform:/resource/TrafficLightProject/TrafficLight/Flashlight.esdl#esdlLink_PackageDecl;;TrafficLight/ClassType;definitions.0;Flashlight/MethodDecl;parts.2;calc/StatementBlock;block;/IfStatement;statements.2;
+5774 = platform:/resource/TrafficLightProject/TrafficLight/Flashlight.esdl#esdlLink_PackageDecl;;TrafficLight/ClassType;definitions.0;Flashlight/MethodDecl;parts.2;calc/StatementBlock;block;/IfStatement;statements.1;

@@ -1,0 +1,168 @@
+classType Driver.CruiseSpeedControl
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active {
+			connection_5
+		}
+	}
+	less at (241, 126) size (2, 5) {
+		inPin connection_24
+		inPin connection_15
+		outPin {
+			connection_6
+		}
+	}
+	ifElse at (321, 141) {
+		inPin connection_6
+		ifControlFlowOutPin {
+			connection_22, connection_32
+		}
+		elseControlFlowOutPin {
+			connection_23, connection_41
+		}
+		sequenceCall {
+			inPin connection_5
+		}
+	}
+	literal Numeric "100.0" at (401, 163) size (49, 0) {
+		outPin {
+			connection_8
+		}
+	}
+	literal Numeric "0.0" at (401, 303) size (49, 0) {
+		outPin {
+			connection_14
+		}
+	}
+	methodArgumentIdentifier calc.targetSpeed at (91, 165) {
+		label at (0, -1)
+		outPin {
+			connection_15
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier brake at (691, 365) {
+		label at (0, -1)
+		inPin connection_42
+		outPin sequenceCall at (-10, -44) {
+			inPin connection_41 {
+				bendpoints (0, 150)
+			}
+		}
+	}
+	simpleIdentifier power at (481, 165) {
+		label at (0, -1)
+		inPin connection_8
+		outPin sequenceCall {
+			inPin connection_22
+		}
+	}
+	simpleIdentifier power at (481, 305) {
+		label at (0, -1)
+		inPin connection_14
+		outPin sequenceCall {
+			inPin connection_23 {
+				bendpoints (0, 110)
+			}
+		}
+	}
+	methodArgumentIdentifier calc.v at (91, 125) {
+		label at (0, -1)
+		outPin {
+			connection_38, connection_24
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	addition at (451, 366) size (2, 6) {
+		inPin connection_28
+		inPin connection_43
+		outPin {
+			connection_44
+		}
+	}
+	simpleIdentifier AirFriction at (311, 401) {
+		label at (0, 1)
+		inPin connection_38 {
+			bendpoints (0, -20), (-60, -20), (-60, 290)
+		}
+		outPin {
+			connection_43
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier maxDecel at (271, 365) {
+		label at (0, -1)
+		outPin {
+			connection_28
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier BrakePedal at (561, 371) {
+		label at (0, 1)
+		inPin connection_44
+		outPin {
+			connection_39
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier brake at (481, 215) {
+		label at (0, -1)
+		inPin connection_33
+		outPin sequenceCall {
+			inPin connection_32 {
+				bendpoints (10, 0), (10, 50)
+			}
+		}
+	}
+	literal Numeric "0.0" at (401, 213) size (49, 0) {
+		outPin {
+			connection_33
+		}
+	}
+	multiplication at (641, 346) size (2, 5) {
+		inPin connection_40
+		inPin connection_39 {
+			bendpoints (20, 0)
+		}
+		outPin {
+			connection_42
+		}
+	}
+	simpleIdentifier corrFak at (561, 345) {
+		label at (0, -1)
+		outPin {
+			connection_40
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	freeComment at (431, 121) {
+		"currentSpeed < targetSpeed"
+	}
+	freeComment at (441, 261) {
+		"currentSpeed >= targetSpeed"
+	}
+	freeComment at (261, 341) {
+		"2.5 m/s^2"
+	}
+	freeComment at (331, 461) {
+		"Berechnung der notwendigen Bremspedalstellung über Luftwiderstandskennlinie (AirFriction) und reversierte Bremskennlinie (BrakePedal) für maximale Abbremsung (maxDecel). Bremspedalstellung aufgrund von Auflösungsfehlern mit Korrekturfaktor (corrFak) 0,9995 versehen."
+	}
+	freeComment at (561, 191) {
+		"Maximale Beschleunigung"
+	}
+	freeComment at (571, 301) {
+		"Bremsung mit \"Pedalstellung\" für 2,5m/s^2"
+	}
+}

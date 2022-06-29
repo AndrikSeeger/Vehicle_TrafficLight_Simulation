@@ -1,0 +1,23 @@
+<?SCHEMA schemaVersion="1.0"?>
+<Workspace xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Program%20Files%20(x86)/Common%20Files/ETAS/Experiment%20Environment/3.7/Schemas/EE.Data.Workspace.xsd" xsi:type="ETAS.EE.Data.WorkspaceType">
+  <PluginData xsi:type="ETAS.EE.Data.PluginDataListType">
+    <Item xsi:type="ETAS.EE.Data.PluginDataType" id="ID3c62d6c5-2665-410f-a871-e5953f72cee5" pluginID="Options" rootFolder="Options_Files">
+      <Documents xsi:type="ETAS.EE.Data.ExternalDocumentListType">
+        <Item xsi:type="ETAS.EE.Data.ExternalDocumentType" id="ID2334c3a1-ff62-454f-aea4-8c55d56c3e52" type="" name="Options" file="Options.opt" />
+      </Documents>
+    </Item>
+    <Item xsi:type="ETAS.EE.Data.PluginDataType" id="ID7460a4d1-a558-4fe6-8efd-1d96832ca07a" pluginID="SignalSourceManager" rootFolder="SignalSourceManager_Files">
+      <Documents xsi:type="ETAS.EE.Data.ExternalDocumentListType">
+        <Item xsi:type="ETAS.EE.Data.ExternalDocumentType" id="ID0e53166e-8407-4f3e-abb5-ef434d0ae961" type="" name="SignalSourcesData" file="SignalSources.xml" />
+      </Documents>
+    </Item>
+  </PluginData>
+  <RecentExperiments xsi:type="ETAS.EE.Data.FileReferenceListType">
+    <Item xsi:type="ETAS.EE.Data.FileReferenceType" id="IDaf20e938-36ff-4cd3-b3a1-87e4d1108d33" path="C:\Users\AndrikSeeger\Desktop\Workspace\TrafficLightProject\experiments\Experiments\system\PC_Final\PC_Final.eex" hintPath="..\..\Experiments\system\PC_Final\PC_Final.eex" />
+    <Item xsi:type="ETAS.EE.Data.FileReferenceType" id="ID6b9efe0e-2e2a-4a75-8c16-6ee603baf4bb" path="C:\Users\AndrikSeeger\Desktop\Workspace\TrafficLightProject\experiments\Experiments\system\PC_PC_5_\PC_PC_5_.eex" hintPath="..\..\Experiments\system\PC_PC_5_\PC_PC_5_.eex" />
+  </RecentExperiments>
+  <WorkspaceInfo xsi:type="ETAS.EE.Data.WorkspaceInfoType">
+    <DateTime xsi:type="ETAS.EE.Data.DateTimeInfoType" id="IDc5a1d6a6-2b0f-4961-9466-87821a6e8196" Created="2022-04-01T12:58:26.484Z" LastOpened="2022-04-11T23:10:38.706Z" LastSaved="2022-04-11T23:09:22.351Z" />
+    <Version xsi:type="ETAS.EE.Data.VersionInfoType" id="ID276ed9a9-353e-4b73-8389-03b83e694870" Created="3.7.10.314" LastSaved="3.7.10.314" MinRequired="3.3.1" />
+  </WorkspaceInfo>
+</Workspace>

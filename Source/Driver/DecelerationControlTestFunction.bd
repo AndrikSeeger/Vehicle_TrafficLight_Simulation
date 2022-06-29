@@ -1,0 +1,341 @@
+classType Driver.DecelerationControlTestFunction
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active {
+			connection_39, connection_45, connection_63, connection_11, connection_13, connection_27, connection_18, connection_22, connection_57
+		}
+	}
+	simpleIdentifier oldSpeed at (311, 135) {
+		label at (0, -1)
+		inPin connection_28
+		outPin {
+			connection_5
+		}
+		sequenceCall {
+			inPin connection_27
+		}
+	}
+	subtraction at (421, 36) size (2, 11) {
+		inPin connection_30 {
+			bendpoints (150, 0), (150, -100)
+		}
+		inPin connection_5
+		outPin {
+			connection_6
+		}
+	}
+	simpleIdentifier accel at (571, 165) {
+		label at (0, -1)
+		inPin connection_12
+		outPin {
+			connection_7
+		}
+		sequenceCall {
+			inPin connection_11
+		}
+	}
+	multiplication at (461, 226) size (2, 7) {
+		inPin connection_37
+		inPin connection_10
+		outPin {
+			connection_9
+		}
+	}
+	literal unit resources.s "1.0" at (391, 283) size (49, 0) {
+		outPin {
+			connection_10
+		}
+	}
+	division at (511, 86) size (2, 18) {
+		inPin connection_6
+		inPin connection_9
+		outPin {
+			connection_12
+		}
+	}
+	greaterOrEqual at (661, 166) size (2, 5) {
+		inPin connection_7
+		inPin connection_15 {
+			bendpoints (40, 0)
+		}
+		outPin {
+			connection_14
+		}
+	}
+	simpleIdentifier accBelowLimit at (721, 185) {
+		label at (0, -1)
+		inPin connection_14
+		outPin {
+			connection_54
+		}
+		sequenceCall {
+			inPin connection_13
+		}
+	}
+	simpleIdentifier limit at (581, 205) {
+		label at (0, -1)
+		outPin {
+			connection_15
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier BrakeMomentum at (191, 451) {
+		label at (0, 1)
+		inPin connection_38
+		outPin {
+			connection_16
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier AirFriction at (191, 371) {
+		label at (0, 1)
+		inPin connection_32 {
+			bendpoints (140, 0)
+		}
+		outPin {
+			connection_17
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	addition at (381, 386) size (2, 9) {
+		inPin connection_17
+		inPin connection_16
+		outPin {
+			connection_19
+		}
+	}
+	simpleIdentifier limit at (451, 455) {
+		label at (0, -1)
+		outPin {
+			connection_21
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	greaterOrEqual at (511, 426) size (2, 4) {
+		inPin connection_26
+		inPin connection_21 {
+			bendpoints (20, 0)
+		}
+		outPin {
+			connection_23
+		}
+	}
+	simpleIdentifier accBelowLimitCalc at (721, 435) {
+		label at (0, -1)
+		inPin connection_23
+		outPin {
+			connection_55
+		}
+		sequenceCall {
+			inPin connection_22
+		}
+	}
+	simpleIdentifier accelCalc at (441, 425) {
+		label at (0, -1)
+		inPin connection_19
+		outPin {
+			connection_26
+		}
+		sequenceCall {
+			inPin connection_18
+		}
+	}
+	methodArgumentIdentifier calc.velocity at (11, 135) {
+		label at (0, -1)
+		outPin {
+			connection_30, connection_32, connection_53, connection_28
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier calc.brake at (101, 465) {
+		label at (0, -1)
+		outPin {
+			connection_38
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	return at (1111, 465) {
+		label at (0, 0)
+		inPin connection_59
+		sequenceCall at (-10, -34) {
+			inPin connection_33
+		}
+	}
+	literal Numeric "0.01" at (391, 223) size (49, 0) {
+		outPin {
+			connection_37
+		}
+	}
+	literal unit resources.a "0.0" at (241, 733) size (49, 0) {
+		outPin {
+			connection_41
+		}
+	}
+	literal unit resources.kmh "0.0" at (51, 673) size (49, 0) {
+		outPin {
+			connection_42
+		}
+	}
+	greater at (121, 636) size (2, 5) {
+		inPin connection_53 {
+			bendpoints (20, 0), (20, 500)
+		}
+		inPin connection_42
+		outPin {
+			connection_44
+		}
+	}
+	greaterOrEqual at (591, 676) size (2, 4) {
+		inPin connection_50
+		inPin connection_43
+		outPin {
+			connection_46
+		}
+	}
+	simpleIdentifier carAccel at (341, 735) {
+		label at (0, -1)
+		inPin connection_41
+		outPin {
+			connection_60
+		}
+		sequenceCall {
+			inPin connection_52 {
+				bendpoints (0, 30)
+			}
+		}
+	}
+	simpleIdentifier carAccel at (351, 675) {
+		label at (0, -1)
+		inPin connection_67
+		outPin {
+			connection_50
+		}
+		sequenceCall {
+			inPin connection_66
+		}
+	}
+	ifElse at (181, 651) {
+		inPin connection_44
+		ifControlFlowOutPin {
+			connection_66
+		}
+		elseControlFlowOutPin {
+			connection_52
+		}
+		sequenceCall {
+			inPin connection_39
+		}
+	}
+	simpleIdentifier accBelowLimitReal at (651, 685) {
+		label at (0, -1)
+		inPin connection_46
+		outPin {
+			connection_56
+		}
+		sequenceCall {
+			inPin connection_45
+		}
+	}
+	and at (881, 186) size (2, 51) {
+		inPin connection_54
+		inPin connection_55
+		inPin connection_56
+		outPin {
+			connection_58
+		}
+	}
+	ifElse at (961, 431) {
+		inPin connection_58
+		ifControlFlowOutPin {
+			connection_33
+		}
+		elseControlFlowOutPin {
+			connection_68
+		}
+		sequenceCall {
+			inPin connection_57
+		}
+	}
+	literal Numeric "0" at (1041, 463) size (49, 0) {
+		outPin {
+			connection_59
+		}
+	}
+	equal at (431, 736) size (2, 5) {
+		inPin connection_60
+		inPin connection_61
+		outPin {
+			connection_65
+		}
+	}
+	literal unit resources.a "0.0" at (361, 773) size (49, 0) {
+		outPin {
+			connection_61
+		}
+	}
+	literal Numeric "2" at (991, 793) size (49, 0) {
+		outPin {
+			connection_64
+		}
+	}
+	return at (1081, 795) {
+		label at (0, 0)
+		inPin connection_64
+		sequenceCall at (-10, -44) {
+			inPin connection_62
+		}
+	}
+	if at (981, 751) {
+		inPin connection_65
+		ifControlFlowOutPin {
+			connection_62
+		}
+		sequenceCall {
+			inPin connection_63
+		}
+	}
+	methodArgumentIdentifier calc.theorAccel at (231, 675) {
+		label at (0, -1)
+		outPin {
+			connection_67
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	literal Numeric "1" at (1041, 543) size (49, 0) {
+		outPin {
+			connection_69
+		}
+	}
+	return at (1111, 545) {
+		label at (0, 0)
+		inPin connection_69
+		sequenceCall at (-10, -34) {
+			inPin connection_68 {
+				bendpoints (0, 50)
+			}
+		}
+	}
+	simpleIdentifier limit at (521, 705) {
+		label at (0, -1)
+		outPin {
+			connection_43
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+}

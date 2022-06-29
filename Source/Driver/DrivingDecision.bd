@@ -1,0 +1,280 @@
+classType Driver.DrivingDecision
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active {
+			connection_25, connection_51, connection_75, connection_77, connection_85, connection_87
+		}
+	}
+	simpleIdentifier resources.TrafficLightMessages.proximity at (31, 165) {
+		label at (0, -1)
+		outPin {
+			connection_28
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier resources.TrafficLightMessages.redLight at (31, 445) {
+		label at (0, -1)
+		outPin {
+			connection_39
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier resources.TrafficLightMessages.yellowLight at (31, 475) {
+		label at (0, -1)
+		outPin {
+			connection_40
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	multiplication at (151, 56) size (2, 4) {
+		inPin connection_19
+		inPin connection_20 {
+			bendpoints (30, 0), (30, 30)
+		}
+		outPin {
+			connection_23
+		}
+	}
+	simpleIdentifier anhalteweg at (261, 95) {
+		label at (0, -1)
+		inPin connection_26
+		outPin sequenceCall {
+			inPin connection_25
+		}
+	}
+	simpleIdentifier resources.CarMessages.v at (51, 55) {
+		label at (0, -1)
+		outPin {
+			connection_20, connection_19
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	division at (211, 66) size (2, 7) {
+		inPin connection_23
+		inPin connection_24
+		outPin {
+			connection_26
+		}
+	}
+	literal unit resources.a "4.91" at (141, 123) size (49, 0) {
+		outPin {
+			connection_24
+		}
+	}
+	lessOrEqual at (181, 166) size (2, 8) {
+		inPin connection_28
+		inPin connection_31
+		outPin {
+			connection_54
+		}
+	}
+	simpleIdentifier anhalteweg at (21, 215) {
+		label at (0, -1)
+		inPin outPin {
+			connection_29
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	addition at (131, 216) size (2, 5) {
+		inPin connection_29
+		inPin connection_57
+		outPin {
+			connection_31
+		}
+	}
+	literal unit resources.kmh "50.0" at (371, 533) size (49, 0) {
+		outPin {
+			connection_90
+		}
+	}
+	and at (301, 196) size (2, 27) {
+		inPin connection_54
+		inPin connection_48 {
+			bendpoints (40, 0)
+		}
+		inPin connection_46
+		outPin {
+			connection_52
+		}
+	}
+	or at (221, 446) size (2, 4) {
+		inPin connection_39
+		inPin connection_40
+		outPin {
+			connection_46
+		}
+	}
+	simpleIdentifier anhalteweg at (21, 365) {
+		label at (0, -1)
+		inPin outPin {
+			connection_45
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	greater at (221, 296) size (2, 8) {
+		inPin connection_44
+		inPin connection_45
+		outPin {
+			connection_48
+		}
+	}
+	simpleIdentifier resources.TrafficLightMessages.proximity at (31, 295) {
+		label at (0, -1)
+		outPin {
+			connection_44
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	literal unit resources.kmh "0.0" at (381, 363) size (49, 0) {
+		outPin {
+			connection_81
+		}
+	}
+	ifElse at (351, 321) {
+		inPin connection_52
+		ifControlFlowOutPin {
+			connection_80
+		}
+		elseControlFlowOutPin {
+			connection_89
+		}
+		sequenceCall {
+			inPin connection_51
+		}
+	}
+	simpleIdentifier deltaBrake at (31, 255) {
+		label at (0, -1)
+		outPin {
+			connection_57
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier resources.CarMessages.brake at (621, 365) {
+		label at (0, -1)
+		inPin connection_78
+		sequenceCall {
+			inPin connection_77
+		}
+	}
+	simpleIdentifier resources.CarMessages.power at (621, 415) {
+		label at (0, -1)
+		inPin connection_76
+		sequenceCall at (-10, -14) {
+			inPin connection_75
+		}
+	}
+	complexIdentifier Driver.CruiseSpeedControl at (451, 361) size (14, 8) {
+		label at (0, 1)
+		methodCall Driver.CruiseSpeedControl.calc {
+			argumentPin targetSpeed at (left, 0) connection_81
+			argumentPin v at (left, 3) connection_79
+			sequenceCall at (0, -44) {
+				inPin connection_80
+			}
+		}
+		elementCall (Driver.CruiseSpeedControl.brake) {
+			returnPin at (right, 0) {
+				connection_78
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+		elementCall (Driver.CruiseSpeedControl.power) {
+			returnPin at (right, 5) {
+				connection_76
+			}
+			sequenceCall {
+				inPin
+			}
+		}
+	}
+	simpleIdentifier resources.CarMessages.v at (381, 395) {
+		label at (0, -1)
+		outPin {
+			connection_79
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier resources.CarMessages.v at (371, 565) {
+		label at (0, -1)
+		outPin {
+			connection_82
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	complexIdentifier Driver.CruiseSpeedControl at (451, 531) size (14, 8) {
+		label at (0, 1)
+		methodCall Driver.CruiseSpeedControl.calc {
+			argumentPin targetSpeed at (left, 0) connection_90
+			argumentPin v at (left, 3) connection_82
+			sequenceCall at (0, -54) {
+				inPin connection_89 {
+					bendpoints (0, 130)
+				}
+			}
+		}
+		elementCall (Driver.CruiseSpeedControl.brake) {
+			returnPin at (right, 0) {
+				connection_86
+			}
+			sequenceCall at (0, 0) {
+				inPin
+			}
+		}
+		elementCall (Driver.CruiseSpeedControl.power) {
+			returnPin at (right, 5) {
+				connection_88
+			}
+			sequenceCall at (0, 0) {
+				inPin
+			}
+		}
+	}
+	simpleIdentifier resources.CarMessages.power at (611, 585) {
+		label at (0, -1)
+		inPin connection_88
+		sequenceCall {
+			inPin connection_87
+		}
+	}
+	simpleIdentifier resources.CarMessages.brake at (611, 535) {
+		label at (0, -1)
+		inPin connection_86
+		sequenceCall {
+			inPin connection_85
+		}
+	}
+	freeComment at (51, 21) {
+		"Berechnung jetziger Anhalteweg"
+	}
+	freeComment at (351, 201) {
+		"Wenn bei roter oder gelber Ampel in Abstandsbereich (proximity) von Ampel der kleiner als Anhalteweg (anhalteweg) + Bremsreserve (deltaBrake) aber größer als Anhalteweg selbst ist wird gebremst bzw. auf 0km/h geregelt, da noch gebremst werden kann bis zum erreichen der Ampel. Ansonsten wird auf 50 km/h geregelt und weitergefahren."
+	}
+	freeComment at (721, 401) {
+		"Regelung auf 0 km/h"
+	}
+	freeComment at (721, 561) {
+		"Regelung auf 50 km/h"
+	}
+}
