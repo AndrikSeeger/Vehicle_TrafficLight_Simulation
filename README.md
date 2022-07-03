@@ -4,7 +4,7 @@
 This project is a graphical implementation of a vehicle and track simulation using ASCET. The track profile is a combination of city and country roads with traffic lights. The simulation of the driver strategy is based on the optimization for a preferably constant speed without having to stop for a yellow or red light.
 
 ## Execution
-To execute the application you should follow these steos: 
+To execute the application you should follow these steps: 
 
 1. Download the project's ZIP-archive.
 2. Unzip the archive and import the project to your workspace in ASCET.
