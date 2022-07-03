@@ -1,3 +1,5 @@
+<!--Copyright Andrik Seeger 2022-->
+
 # Stop-Roll-Go  /  ASCET
 
 Graphische Implementierung einer Fahrzeug- und Streckensimulation mittels ASCET. Das Fahrprofil stellt eine Kombination aus Stadt- und Überlandverkehr inklusive Ampeln dar. Die Simulation der Fahrerstrategie basiert auf der Optimierung zur möglichst konstanten Fahrt ohne Anhalten. 
