@@ -72,9 +72,8 @@ This simulation is ideal for:
 
 ---
 
-## 👥 Contributors
+## 👥 Additional Contributors
 
-* Andrik Seeger
 * Thomas Tran
 * Tom Schubert
 
