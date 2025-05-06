@@ -26,12 +26,15 @@ This project showcases a simulation of vehicle behavior and traffic light intera
 ## 🚀 Getting Started
 
 1. **Download the project**
+   
    Clone the repository or download the provided `.zip` archive.
 
 2. **Open in ASCET**
+   
    Launch **ETAS ASCET** and import the unzipped project directory.
 
 3. **Run the simulation**
+   
    Navigate to `TrafficLightProject/experiments/Experiments/system/PC_Final`
    Start the `PC_App` experiment to launch the simulation.
 
@@ -42,7 +45,8 @@ This project showcases a simulation of vehicle behavior and traffic light intera
    * Vehicle speed profiles
    * Signal states
    * Acceleration behavior in response to traffic light changes
-  
+
+ *Example:* 
  <p align="center">
 <img src="https://github.com/AndrikSeeger/Vehicle_TrafficLight_Simulation/blob/main/Ressources/Experiment_Environment.png"/>
 </p>
