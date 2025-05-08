@@ -1,4 +1,4 @@
-<!--Copyright Andrik Seeger 2022-->
+<!--Copyright Andrik Seeger 2022 -->
 # 🚦 Vehicle Traffic Light Simulation with ETAS ASCET
 
 This project showcases a simulation of vehicle behavior and traffic light interaction using **ETAS ASCET** – a professional tool for model-based development of embedded systems. The simulation focuses on optimizing driver strategies to reduce stops at traffic signals by adjusting speed intelligently.
